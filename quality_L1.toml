@@ -1,0 +1,62 @@
+[[criterion]]
+name = "项目结构分析"
+description = "[Explicit]AI 是否阅读并分析了当前项目的目录结构，输出了清晰的项目结构图"
+type = "likert"
+points = 5
+weight = 1
+score =3
+rationale ="用户明确要求阅读当前项目，分析项目结构，并做出项目结构图，这是理解项目的基础，后续所有操作都依赖于此"
+
+[[criterion]]
+name="技术栈识别"
+description="[Explicit]AI 是否准确识别并列出了项目所使用的技术栈（如 Vue 2、Element UI、Vuex、Webpack 等）"
+type = "likert"
+points = 5
+weight = 1.0
+score = 3
+rationale = "用户明确要求列出需要使用哪些技术栈，正确识别技术栈是保证新增功能与现有项目风格一致的前提"
+
+[[criterion]]
+name="菜单项位置"
+description="[Implicit] 客户列表 菜单项是否被添加在 商家列表 的正下方"
+type = "likert"
+points = 5
+weight = 1.0
+score = 3
+rationale = "用户明确指定在商家列表下面添加一个客户列表的菜单，位置顺序是核心要求"
+
+[[criterion]]
+name = "路由跳转配置"
+description = "[Explicit]点击客户列表菜单后是否能正确跳转到 /customerList 对应的列表页面"
+type = "likert"
+points = 5
+weight = 1.0
+score = 2
+rationale = "用户要求点击后跳转到一个列表页，需要验证路由注册、组件绑定、菜单 index 三者是否一致"
+
+[[criterion]]
+name = "列表页字段内容一致"
+description = "[Explicit]客户列表页的表格字段（店铺名称、店铺地址、店铺介绍、操作列等）是否与商家列表完全一致"
+type = "likert"
+points = 5
+weight = 1.0
+score = 3
+rationale = "用户要求列表页的字段内容需要和商家列表保持一致，字段名、字段数量、展开详情内容都应相同"
+
+[[criterion]]
+name = "列表页格式一致"
+description = "[Implicit] 客户列表页的整体布局、表格样式、分页组件、编辑弹窗等 UI 格式是否与商家列表一致"
+type = "likert"
+points = 5
+weight = 1.0
+score = 4
+rationale = "用户要求格式需要和商家列表保持一致，包括表格列宽、分页位置、弹窗结构、CSS 样式等"
+
+[[criterion]]
+name = "文件完整性"
+description = "[Explicit] 是否创建了独立的页面组件文件（customerList.vue），并在路由和侧边栏菜单中完成注册，形成完整闭环"
+type = "likert"
+points = 5
+weight = 1.0
+score = 3
+rationale = "新增功能不是孤立的，必须同时修改页面文件、路由配置、菜单模板三处才能正常工作，缺一不可"
