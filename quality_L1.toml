@@ -1,6 +1,6 @@
 [[criterion]]
 name = "项目结构分析"
-description = "[Explicit]AI 是否阅读并分析了当前项目的目录结构，输出了清晰的项目结构图"
+description = "[Explicit] 验证AI是否完整读取并分析了项目目录结构，输出了清晰的项目结构图。1: 是否读取了项目根目录下的文件和文件夹列表 2: 是否识别了 src 目录及其子目录结构 3: 是否分析了各主要目录的功能用途 4: 是否以文字或树形图形式输出了项目结构图 5: 输出的结构图是否清晰完整、易于理解"
 type = "likert"
 points = 5
 weight = 1
@@ -9,7 +9,7 @@ rationale ="用户明确要求阅读当前项目，分析项目结构，并做�
 
 [[criterion]]
 name="技术栈识别"
-description="[Explicit]AI 是否准确识别并列出了项目所使用的技术栈（如 Vue 2、Element UI、Vuex、Webpack 等）"
+description="[Explicit] 验证AI是否准确识别并列出了项目所使用的主要技术栈。1: 是否识别了 Vue 2 框架 2: 是否识别了 Element UI 组件库 3: 是否识别了 Vuex 状态管理 4: 是否识别了 Webpack 构建工具 5: 是否完整列出了项目依赖中的其他主要技术"
 type = "likert"
 points = 5
 weight = 1.0
@@ -18,7 +18,7 @@ rationale = "用户明确要求列出需要使用哪些技术栈，正确识别�
 
 [[criterion]]
 name="菜单项位置"
-description="[Implicit] 客户列表 菜单项是否被添加在 商家列表 的正下方"
+description="[Implicit] 验证客户列表菜单项是否正确添加在商家列表菜单项的正下方。1: 是否在侧边栏菜单中新增了客户列表菜单项 2: 客户列表菜单项是否紧邻在商家列表菜单项正下方 3: 菜单项的文字显示是否正确为'客户列表' 4: 菜单项的图标或样式是否与现有菜单风格一致 5: 菜单项在页面中是否正常渲染可见"
 type = "likert"
 points = 5
 weight = 1.0
@@ -27,7 +27,7 @@ rationale = "用户明确指定在商家列表下面添加一个客户列表的�
 
 [[criterion]]
 name = "路由跳转配置"
-description = "[Explicit]点击客户列表菜单后是否能正确跳转到 /customerList 对应的列表页面"
+description = "[Explicit] 验证点击客户列表菜单后能否正确跳转到 /customerList 对应的列表页面。1: 是否在路由配置中注册了 /customerList 路径 2: 路由是否绑定了正确的页面组件 3: 菜单项的 index 属性是否与路由路径一致 4: 点击菜单后浏览器 URL 是否变为 /customerList 5: 跳转后页面内容是否正确渲染显示"
 type = "likert"
 points = 5
 weight = 1.0
@@ -36,7 +36,7 @@ rationale = "用户要求点击后跳转到一个列表页，需要验证路由�
 
 [[criterion]]
 name = "列表页字段内容一致"
-description = "[Explicit]客户列表页的表格字段（店铺名称、店铺地址、店铺介绍、操作列等）是否与商家列表完全一致"
+description = "[Explicit] 验证客户列表页的表格字段是否与商家列表页完全一致。1: 是否包含'店铺名称'字段列 2: 是否包含'店铺地址'字段列 3: 是否包含'店铺介绍'字段列 4: 是否包含'操作'列 5: 各字段的名称、数量及顺序是否与商家列表完全相同"
 type = "likert"
 points = 5
 weight = 1.0
@@ -45,7 +45,7 @@ rationale = "用户要求列表页的字段内容需要和商家列表保持一�
 
 [[criterion]]
 name = "列表页格式一致"
-description = "[Implicit] 客户列表页的整体布局、表格样式、分页组件、编辑弹窗等 UI 格式是否与商家列表一致"
+description = "[Implicit] 验证客户列表页的整体 UI 格式是否与商家列表页保持一致。1: 整体页面布局结构是否与商家列表一致 2: 表格样式和列宽是否与商家列表一致 3: 分页组件的位置和样式是否与商家列表一致 4: 编辑弹窗的结构和功能是否与商家列表一致 5: 使用的 CSS 类名和样式规则是否与商家列表一致"
 type = "likert"
 points = 5
 weight = 1.0
@@ -54,7 +54,7 @@ rationale = "用户要求格式需要和商家列表保持一致，包括表格�
 
 [[criterion]]
 name = "文件完整性"
-description = "[Explicit] 是否创建了独立的页面组件文件（customerList.vue），并在路由和侧边栏菜单中完成注册，形成完整闭环"
+description = "[Explicit] 验证是否创建了完整的页面组件并在路由和菜单中完成注册，形成可运行的完整闭环。1: 是否创建了独立的 customerList.vue 组件文件 2: 路由配置文件中是否完成了路由注册 3: 侧边栏菜单模板中是否完成了菜单项添加 4: 页面文件、路由配置、菜单模板三处修改是否齐全 5: 从菜单点击到路由跳转到页面显示的完整链路是否可正常工作"
 type = "likert"
 points = 5
 weight = 1.0
