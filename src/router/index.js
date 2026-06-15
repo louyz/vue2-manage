@@ -20,6 +20,7 @@ const vueEdit = r => require.ensure([], () => r(require('@/page/vueEdit')), 'vue
 const adminSet = r => require.ensure([], () => r(require('@/page/adminSet')), 'adminSet');
 const sendMessage = r => require.ensure([], () => r(require('@/page/sendMessage')), 'sendMessage');
 const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');
+const customerList = r => require.ensure([], () => r(require('@/page/customerList')), 'customerList');
 
 const routes = [
 	{
@@ -50,6 +51,10 @@ const routes = [
 			path: '/shopList',
 			component: shopList,
 			meta: ['数据管理', '商家列表'],
+		},{
+			path: '/customerList',
+			component: customerList,
+			meta: ['数据管理', '客户列表'],
 		},{
 			path: '/foodList',
 			component: foodList,

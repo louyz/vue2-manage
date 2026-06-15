@@ -226,3 +226,27 @@ export const getAddressById = address_id => fetch('/v1/addresse/' + address_id);
  */
 
 export const getUserCity = () => fetch('/v1/user/city/count');
+
+/**
+ * 获取客户列表
+ */
+
+export const getCustomers = data => fetch('/shopping/customers', data);
+
+/**
+ * 获取客户数量
+ */
+
+export const getCustomersCount = () => fetch('/shopping/customers/count');
+
+/**
+ * 更新客户信息
+ */
+
+export const updateCustomer = data => fetch('/shopping/updatecustomer', data, 'POST');
+
+/**
+ * 删除客户
+ */
+
+export const deleteCustomer = customer_id => fetch('/shopping/customer/' + customer_id, {}, 'DELETE');
